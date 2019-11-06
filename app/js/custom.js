@@ -214,9 +214,46 @@ console.log(num.value); //Undefined
     num = "Hello";
 console.log(num.value); //Undefined   
     num = null; 
-console.log(num.value); // Type error
+//console.log(num.value); // Type error
+
+//Условные инструкции
+
+let name2 = "Dmitriy", homecity;
+
+if (name2 === "John") {
+    homecity = "Boston";
+} else if (name2 === "Dmitriy") {
+    homecity = "Rostov";
+} else if (name2 === "Bill") {
+    homecity = "LA";
+}
+console.log(homecity);
 
 
+let name3 = "Doe"
+switch(name3) {
+    case "John":  homecity = "Boston"; break;
+    case "Dmitriy":  homecity = "Rostov"; break;
+    case "Bill":  homecity = "LA";
+    default: homecity = "Moscow";
+}
+console.log(homecity);
 
+
+let x = 5,
+    text;
+if (x > 10) {
+    text = "x больше десяти";
+} else if (x < 10) {
+    text = "x меньше десяти";
+} else {
+    text = "x равен десяти";
+}
+console.log(text);
+
+let x2 = 10,
+    text2;
+    text2 = x2 > 10 ? "x больше десяти" : x2 < 10  ? "x меньше десяти" : "x равен десяти"; 
+console.log(text2);
 
 
