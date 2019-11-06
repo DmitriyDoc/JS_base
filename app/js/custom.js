@@ -69,7 +69,22 @@ console.log(Infinity / Infinity); //NaN
 console.log(Math.sqrt(-10)); //NaN 
 console.log(NaN === NaN); //false  
  
+//Строки
+console.log("Hello where".length); // 11 длина строки
+console.log("Another \"very \\ long\" string"); // \ знак экранирования
 
+let string = "Sometimes the same is different";
+console.log(string.length); // 31
+console.log(string.charAt(string.length - 1)); // t
+console.log(string.substring(10)); // the same is different
+console.log(string.substring(10,21)); // the same is
+console.log(string.slice(-12)); // is different
+console.log(string.substr(14,4)); // same
+console.log(string.lastIndexOf("me")); // 16
+console.log(string.split(" ")); // Возвращает массив разделенный на пробелы
+console.log(string[2]); // m
+console.log(string.toLocaleLowerCase()); // Приводит к нижнему регистру
+console.log(string.toLocaleUpperCase()); // Приводит к верхнему регистру
 
 
 
