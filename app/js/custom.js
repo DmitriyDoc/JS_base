@@ -148,5 +148,75 @@ function greet (name) {
 console.log(greet("Ivan"));
 console.log(greet());
 
+// Преобразование типов
+console.log(5 + "5"); // 55
+console.log(typeof(5 + "5")); // string
+console.log("5" * "4"); // 20
+console.log("5" * "Hi"); // NaN
+console.log(typeof("5" * "Hi")); // number
+
+console.log("5" == 5); // true
+console.log("0" == false) // true
+console.log(0 == false); // true
+console.log("5" == true) // false
+console.log("" == false) // true
+console.log(null == false) // false
+console.log(null == true) // false
+console.log(undefined == true) // false
+console.log(undefined == false) // false
+console.log(undefined == null) //  true
+console.log(undefined === null) //  false
+
+console.log(Number("555")); // 555
+console.log(typeof(Number("555"))); // Number
+console.log(String(222)); // "222"
+console.log(typeof(String(222))); // String
+console.log(Boolean(1)); // true
+console.log(typeof(Boolean(1))); // Boolean
+
+console.log(!!5); // true
+console.log(!!0); // false
+console.log(typeof(345 + "")); // String
+console.log(typeof( +"454")); // Number
+
+let number = 22;
+console.log(typeof(number.toString())); // String
+    number = 45;
+console.log(number.toString(3)); // 1200    
+    number = 5;
+console.log(number.toString(2)); // 101  
+console.log(typeof(false.toString())); // String
+
+//Встроенные функции
+
+console.log(parseInt("45 px", 10)); // 45   Number
+console.log(parseFloat("12.45 em")); // 12.45 Number
+
+console.log(typeof(String(Infinity))); // String
+console.log(typeof(String(NaN))); // String
+console.log(+""); // 0
+
+console.log(!!""); // flase
+console.log(!!NaN); // flase
+console.log(!!0); // flase
+console.log(!!null); // flase
+console.log(!!undefined); // flase
+
+console.log(!!"Hi"); // true
+console.log(+"        4  e"); // NaN
+console.log(parseInt("4 px")); // 4
+
+console.log(+true); // 1 
+console.log(+false); // 0   
+
+let num = 5;
+console.log(num.value); //Undefined
+    num = "Hello";
+console.log(num.value); //Undefined   
+    num = null; 
+console.log(num.value); // Type error
+
+
+
 
 
