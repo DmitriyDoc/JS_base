@@ -127,3 +127,26 @@ let newString = someString || "Default String";
 console.log(newString); // Defaul String
 
 
+// Null и Undefined
+
+console.log(typeof(null)); // object
+console.log(typeof(undefined)); // undefined
+console.log(null == undefined); // true
+console.log(null === undefined); // false
+
+let temp;
+let object = {name:"Ivan"};
+let arr = [1,2,3,4];
+
+console.log(temp); //undefined
+console.log(object.lastName); //undefined
+console.log(arr[4]); //undefined
+
+function greet (name) {
+    return "Hello" + " " + name;
+}
+console.log(greet("Ivan"));
+console.log(greet());
+
+
+
