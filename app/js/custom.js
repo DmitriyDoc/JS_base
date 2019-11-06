@@ -87,6 +87,43 @@ console.log(string.toLocaleLowerCase()); // Приводит к нижнему �
 console.log(string.toLocaleUpperCase()); // Приводит к верхнему регистру
 
 
+// Булев тип
 
+console.log(true); //true
+console.log(false); //false
+console.log(5 === 5); //true
+console.log(5 === 6); //false
+
+console.log(Boolean(5)); // true
+
+//Falsy values
+
+console.log(Boolean(undefined)); //false
+console.log(Boolean(null)); //false
+console.log(Boolean(0)); //false
+console.log(Boolean(NaN)); //false
+console.log(Boolean("")); //false
+
+let s = "text"
+if (s) {
+    console.log("Its true"); // Its true
+}
+
+
+console.log(true && false); // false
+console.log(true && true); // true
+console.log(true || false); // true
+console.log(false || false); // false
+console.log(!false); //true
+console.log(!true); //false
+
+let a = 0,
+    isTrue = false;
+isTrue && (a = 5); 
+console.log(a); // 0
+
+let someString = "";
+let newString = someString || "Default String";
+console.log(newString); // Defaul String
 
 
