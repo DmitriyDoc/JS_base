@@ -41,3 +41,40 @@ let func1 = function () {
 };
 
 func1();
+
+// Замыкания
+let counter = (function(){
+    let count = 0;
+    return function(num){
+        count = num !== undefined ? num : count;
+        return count++;
+    }
+}());
+
+console.log(counter()); // 0
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter(100)); // 100
+console.log(counter()); // 101
+console.log(counter()); // 102 
+console.log(counter(0)); // 0
+console.log(counter()); // 1
+
+
+let func2 = function(){
+    let i = 10;
+    return function(){
+        return i;
+    }
+};
+
+let anotherFunc = func2();
+
+let func3 = function(){
+    let i = 20;
+    console.log(i); // 20
+    console.log(anotherFunc()); // 10
+
+};
+
+func3();
