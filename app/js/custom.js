@@ -227,7 +227,7 @@ if (name2 === "John") {
 } else if (name2 === "Bill") {
     homecity = "LA";
 }
-console.log(homecity);
+console.log(homecity); // Rostov
 
 
 let name3 = "Doe"
@@ -235,9 +235,9 @@ switch(name3) {
     case "John":  homecity = "Boston"; break;
     case "Dmitriy":  homecity = "Rostov"; break;
     case "Bill":  homecity = "LA";
-    default: homecity = "Moscow";
+    default: homecity = "Moscow"; 
 }
-console.log(homecity);
+console.log(homecity); // Moscow
 
 
 let x = 5,
@@ -249,11 +249,11 @@ if (x > 10) {
 } else {
     text = "x равен десяти";
 }
-console.log(text);
+console.log(text); // x меньше десяти
 
 let x2 = 10,
     text2;
     text2 = x2 > 10 ? "x больше десяти" : x2 < 10  ? "x меньше десяти" : "x равен десяти"; 
-console.log(text2);
+console.log(text2); // x равен десяти
 
 

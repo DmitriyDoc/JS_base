@@ -21,4 +21,23 @@ while (iw < 10) {
 
 // Do Whiile
 id = 0;
-do console.log(id++); while (id < 10)
+do console.log(id++); while (id < 10);
+
+
+//Цепочки областей видимости
+
+let num1 = 5;
+
+let func1 = function () {
+    let num1 = 10;
+    console.log(num1); // 10
+    let funcInner = function() {
+        let num1;
+        console.log(num1); // Undefined
+        num1 = 15;
+    }
+    funcInner();
+    console.log(num1); // 10
+};
+
+func1();
