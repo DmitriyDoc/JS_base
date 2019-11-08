@@ -78,3 +78,17 @@ let func3 = function(){
 };
 
 func3();
+
+// Обработка исключений
+
+let calculate = function(n) {
+    if (n > 10) throw new Error(" n should be less than 10");
+    return n + 10;
+};
+//calculate(30); //Uncaught Error:  n should be less than 10
+
+try {
+    calculate(30);
+} catch (e) {
+    console.log("Can't execute calculate: " + e.message);
+}
