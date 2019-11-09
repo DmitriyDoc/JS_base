@@ -45,6 +45,46 @@ console.log(object2.z); // undefined
 console.log("z" in object2); // true
 
 
+// this не прямой вызов методов
+let greet0 = function() {
+    return "Hi! My name is " + this.name;
+};
+
+let person1 = {
+    name: "John",
+    greet: greet0
+};
+
+let person2 = {
+    name: "Bob",
+    greet: greet0
+};
+
+console.log(person1.greet()); // Hi! My name is John
+console.log(person2.greet()); // Hi! My name is Bob
+console.log(greet0); // вернет функцию 
+console.log(this); // вернет объект window
+
+
+let greet01 = function(greeting) {
+    return greeting + "! My name is " + this.name;
+};
+
+let person00 = {
+    name: "John",
+    greet: greet01
+};
+
+let person11 = {
+    name: "John",
+    greet: greet01
+};
+
+let bound = greet01.bind(person11);
+console.log(bound("Hello there")); // Hello there! My name is John
+
+
+
 
 
 
