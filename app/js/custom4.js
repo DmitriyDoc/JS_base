@@ -43,3 +43,50 @@ for (property in persona) {
     console.log(property); // нужно переключить enumerable: true и свойство gender будет выводиться
 };
 
+// Прототипы и наследование
+let PersonP = {
+    constructor: function(name, age, gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        return this;
+    },
+    greet: function() {
+        console.log("Hi, my name is " + this.name);
+    }
+};
+
+let personOne, personTwo, personThird, WebDeveloper, developer;
+
+personOne = Object.create(PersonP).constructor("John", 35, "male");
+personTwo = Object.create(PersonP).constructor("Jessica", 28, "female");
+personThird = Object.create(PersonP).constructor("Bruce", 38, "male");
+
+console.log(personOne.name); // John
+console.log(personTwo.age); // 28
+console.log(personThird.gender); // male
+
+personOne.greet(); // Hi, my name is John
+personTwo.greet(); // Hi, my name is Jessica
+personThird.greet(); // Hi, my name is Bruce
+
+WebDeveloper = Object.create(PersonP);
+WebDeveloper.constructor = function(name, age, gender, skills) {
+    PersonP.constructor.apply(this, arguments);
+    this.skills = skills || [];
+    return this;
+};
+
+WebDeveloper.develop = function() {
+    console.log("Working...");
+};
+
+developer = Object.create(WebDeveloper).constructor("Jack", 21, "male",
+            ["html","css","js","php","mysql"]);
+
+console.log(developer.skills); //  ["html", "css", "js", "php", "mysql"]
+console.log(developer.name); // Jack
+developer.develop(); // Working...
+developer.greet(); // Hi, my name is Jack            
+
+//
